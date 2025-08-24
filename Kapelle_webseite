@@ -1,2 +1,92 @@
-Hallo.
-Dies ist ein Test.                     123
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Landingpage</title>
+  <style>
+    /* Hintergrund */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      background: url("https://i.ibb.co/1MK1vKp/FUJI5725.jpg") no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* halbtransparenter Overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      padding: 20px;
+      width: 300px;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #f0f0f0;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Erste Box -->
+    <div class="card">
+      <a href="https://ibb.co/album/4sJ26S?sort=date_asc" target="_blank">
+        <h2>Wortgottesdienst</h2>
+        <img src="https://i.ibb.co/album/4sJ26S?sort=date_asc" alt="Wortgottesdienst Bild">
+      </a>
+    </div>
+
+    <!-- Zweite Box -->
+    <div class="card">
+      <a href="https://pixeldrain.com/u/viMGLNfM" target="_blank">
+        <h2>Diashow</h2>
+        <img src="https://i.ibb.co/RpbshDhW/IMG-9661-photo.jpg" alt="Diashow Bild">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
